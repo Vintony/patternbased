@@ -5,8 +5,8 @@ public class testApp {
 
     private static String driver = "com.mysql.cj.jdbc.Driver";
     private static String url = "jdbc:mysql://localhost:3306/test";
-    private static String userName = "yourname";
-    private static String userPass = "yourpass";
+    private static String userName = "Vincent";
+    private static String userPass = "Ljc19950925!";
     private static String tableName = "test_table";
     private static String columnLabel = "test_column";
 

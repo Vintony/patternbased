@@ -3,7 +3,6 @@ import java.sql.SQLException;
 import model.UserAuth;
 
 public class testApp {
-
     private static String driver = "com.mysql.cj.jdbc.Driver";
     private static String url = "jdbc:mysql://localhost:3306/emojiproject";
     private static String userName = "Vincent";

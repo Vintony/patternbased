@@ -20,7 +20,7 @@ public class UserAuth {
     public static UserAuth getInstance(){
         return UserAuthHolder.INSTANCE;
     }
-
+    
     public void Connect(String driver,String jdbcUrl) {
         try {
             Class.forName(driver).newInstance();

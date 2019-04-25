@@ -2,7 +2,28 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3017ef62-6108-4bb1-a7d2-bfcbde00b070" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/patternbased/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/patternbased/JDBCconnecter.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/patternbased/JDBCconnecter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/patternbased/controller/displayAbstract.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/patternbased/controller/displayAbstract.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/patternbased/controller/displayDetail.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/patternbased/controller/displayDetail.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/patternbased/controller/displayList.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/patternbased/controller/displayList.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/patternbased/controller/login.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/patternbased/controller/login.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/patternbased/model/TweeterAbstract.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/patternbased/model/TweeterAbstract.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/patternbased/model/TweeterAbstractFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/patternbased/model/TweeterAbstractFactory.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/patternbased/model/TweeterDetail.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/patternbased/model/TweeterDetail.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/patternbased/model/TweeterDetailFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/patternbased/model/TweeterDetailFactory.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/patternbased/model/TweeterFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/patternbased/model/TweeterFactory.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/patternbased/model/TweeterList.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/patternbased/model/TweeterList.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/patternbased/model/TweeterListFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/patternbased/model/TweeterListFactory.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/patternbased/model/TweeterObject.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/patternbased/model/TweeterObject.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/patternbased/model/UserAuth$UserAuthHolder.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/patternbased/model/UserAuth$UserAuthHolder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/patternbased/model/UserAuth.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/patternbased/model/UserAuth.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/patternbased/testApp.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/patternbased/testApp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/patternbased/testFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/patternbased/testFactory.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/patternbased/view/MainScreen$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/patternbased/view/MainScreen$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/Login.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -17,15 +38,6 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/model/TweeterObject.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="361">
-              <caret line="19" selection-start-line="19" selection-end-line="19" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/twitter.sql">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="456">
@@ -37,8 +49,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/testApp.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="435">
-              <caret line="26" column="12" lean-forward="true" selection-start-line="26" selection-start-column="12" selection-end-line="26" selection-end-column="12" />
+            <state relative-caret-position="456">
+              <caret line="26" column="12" selection-start-line="26" selection-start-column="12" selection-end-line="26" selection-end-column="12" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -49,13 +61,22 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/view/Login.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1351">
-              <caret line="82" column="5" lean-forward="true" selection-start-line="82" selection-start-column="5" selection-end-line="82" selection-end-column="5" />
+            <state relative-caret-position="285">
+              <caret line="36" selection-start-line="36" selection-end-line="36" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#893#894#0" expanded="true" />
-                <element signature="e#921#922#0" expanded="true" />
+                <element signature="e#830#1069#0" expanded="true" />
+                <element signature="e#1068#1069#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar://C:/Program Files/Java/jdk1.8.0_201/src.zip!/java/lang/Runnable.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="576">
+              <caret line="67" column="25" selection-start-line="67" selection-start-column="25" selection-end-line="67" selection-end-column="25" />
             </state>
           </provider>
         </entry>
@@ -63,12 +84,10 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/view/MainScreen.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="798">
-              <caret line="42" column="1" selection-start-line="42" selection-start-column="1" selection-end-line="42" selection-end-column="1" />
+            <state relative-caret-position="722">
+              <caret line="42" selection-start-line="42" selection-end-line="42" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#632#633#0" expanded="true" />
-                <element signature="e#660#661#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -170,16 +189,16 @@
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/src/testApp.java" />
-        <option value="$PROJECT_DIR$/src/view/Login.java" />
         <option value="$PROJECT_DIR$/src/view/MainScreen.java" />
+        <option value="$PROJECT_DIR$/src/view/Login.java" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="801" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="800" />
     <option name="y" value="34" />
     <option name="width" value="974" />
-    <option name="height" value="1047" />
+    <option name="height" value="1048" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="1" id="Add" />
@@ -190,7 +209,6 @@
     </navigator>
     <panes>
       <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -213,6 +231,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -309,17 +328,17 @@
       <workItem from="1555605178355" duration="484000" />
       <workItem from="1555607780589" duration="2108000" />
       <workItem from="1556192001311" duration="2992000" />
+      <workItem from="1556201856638" duration="346000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="25032000" />
+    <option name="totallyTimeSpent" value="25378000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
+    <frame x="-6" y="-6" width="1381" height="885" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18283582" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18518518" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -328,7 +347,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.329718" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3253796" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3253796" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -469,6 +488,33 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/twitter.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="456">
+          <caret line="24" column="31" selection-start-line="24" selection-start-column="31" selection-end-line="24" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/testApp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="456">
+          <caret line="26" column="12" selection-start-line="26" selection-start-column="12" selection-end-line="26" selection-end-column="12" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/view/MainScreen.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="722">
+          <caret line="42" selection-start-line="42" selection-end-line="42" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/model/TweeterListFactory.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="76">
@@ -520,43 +566,28 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/twitter.sql">
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_201/src.zip!/java/awt/event/MouseAdapter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="456">
-          <caret line="24" column="31" selection-start-line="24" selection-start-column="31" selection-end-line="24" selection-end-column="31" />
+        <state relative-caret-position="242">
+          <caret line="73" column="16" selection-start-line="73" selection-start-column="16" selection-end-line="73" selection-end-column="16" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/testApp.java">
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_201/src.zip!/java/lang/Runnable.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="26" column="12" lean-forward="true" selection-start-line="26" selection-start-column="12" selection-end-line="26" selection-end-column="12" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/view/MainScreen.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="798">
-          <caret line="42" column="1" selection-start-line="42" selection-start-column="1" selection-end-line="42" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#632#633#0" expanded="true" />
-            <element signature="e#660#661#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="576">
+          <caret line="67" column="25" selection-start-line="67" selection-start-column="25" selection-end-line="67" selection-end-column="25" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/view/Login.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1351">
-          <caret line="82" column="5" lean-forward="true" selection-start-line="82" selection-start-column="5" selection-end-line="82" selection-end-column="5" />
+        <state relative-caret-position="285">
+          <caret line="36" selection-start-line="36" selection-end-line="36" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#893#894#0" expanded="true" />
-            <element signature="e#921#922#0" expanded="true" />
+            <element signature="e#830#1069#0" expanded="true" />
+            <element signature="e#1068#1069#0" expanded="true" />
           </folding>
         </state>
       </provider>

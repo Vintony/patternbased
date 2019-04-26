@@ -21,7 +21,7 @@ public class Main_Screen extends JFrame {
 
     private JPanel contentPane;
     private JTextField Search_content;
-    private JList List;
+    private JList Stat_list;
 
     /**
      * Launch the application.
@@ -79,26 +79,36 @@ public class Main_Screen extends JFrame {
         lblWordStatisticalAnalysis.setBounds(0, 2, 403, 73);
         contentPane.add(lblWordStatisticalAnalysis);
 
-        List = new JList();
-        List.setBounds(21, 135, 737, 413);
-        contentPane.add(List);
+        Stat_list = new JList();
+        Stat_list.setBounds(21, 135, 737, 413);
+        contentPane.add(Stat_list);
 
         JRadioButton Sort_max = new JRadioButton("Max");
         Sort_max.setFont(new Font("Times New Roman", Font.PLAIN, 20));
         Sort_max.setHorizontalAlignment(SwingConstants.CENTER);
-        Sort_max.setBounds(135, 97, 78, 31);
+        Sort_max.setBounds(582, 86, 78, 31);
         contentPane.add(Sort_max);
 
         JLabel lblNewLabel = new JLabel("Sort by");
         lblNewLabel.setFont(new Font("Times New Roman", Font.PLAIN, 24));
         lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
-        lblNewLabel.setBounds(21, 96, 108, 29);
+        lblNewLabel.setBounds(468, 85, 108, 29);
         contentPane.add(lblNewLabel);
 
         JRadioButton Sort_min = new JRadioButton("Min");
         Sort_min.setFont(new Font("Times New Roman", Font.PLAIN, 20));
         Sort_min.setHorizontalAlignment(SwingConstants.CENTER);
-        Sort_min.setBounds(226, 97, 85, 31);
+        Sort_min.setBounds(673, 86, 85, 31);
         contentPane.add(Sort_min);
+        
+        JLabel lblStatFor = new JLabel("Stat for");
+        lblStatFor.setHorizontalAlignment(SwingConstants.CENTER);
+        lblStatFor.setFont(new Font("Times New Roman", Font.PLAIN, 24));
+        lblStatFor.setBounds(21, 85, 78, 29);
+        contentPane.add(lblStatFor);
+        
+        JLabel Choose_name = new JLabel("the chose name from the former list");
+        Choose_name.setBounds(108, 85, 352, 29);
+        contentPane.add(Choose_name);
     }
 }

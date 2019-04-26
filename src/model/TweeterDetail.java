@@ -35,19 +35,19 @@ public class TweeterDetail implements TweeterObject {
     }
 
     @Override
-    public String getTweeter() {
+    public List getTweeter() {
         System.out.println("Forbidden Method Call!");
         return null;
     }
 
     @Override
-    public String getIntro() {
+    public List getIntro() {
         System.out.println("Forbidden Method Call!");
         return null;
     }
 
     @Override
-    public String getDetailName() {
+    public List getDetailName() {
         System.out.println("Forbidden Method Call!");
         return null;
     }
@@ -59,7 +59,7 @@ public class TweeterDetail implements TweeterObject {
     }
 
     @Override
-    public String getDate() {
+    public List getDate() {
         System.out.println("Forbidden Method Call!");
         return null;
     }

@@ -5,15 +5,15 @@ import java.util.*;
 public interface TweeterObject {
     public void declare();
 
-    public String getTweeter();
+    public List getTweeter();
 
-    public String getIntro();
+    public List getIntro();
 
-    public String getDetailName();
+    public List getDetailName();
 
     public ArrayList<Integer> getTotalCount();
 
-    public String getDate();
+    public List getDate();
 
     public List getEveryTweet(String detailname);
 }

@@ -2,3 +2,4 @@
 .idea\*.xml
 *.xml
 *.kotlin_module
+.idea/workspace.xml

@@ -11,15 +11,15 @@ public class TweeterAbstract implements TweeterObject{
     }
 
     @Override
-    public String getTweeter() {
-        String result = "";
+    public List getTweeter() {
+        List<String> result = new ArrayList<>();
         try {
             UserAuth auth = UserAuth.getInstance();
             ResultSet rs = auth.executeQuery("SELECT tweeter FROM " + "tweeterabstract");
             while (rs.next())
             {
                 // System.out.println(rs.getString("tweeter"));
-                result = result + rs.getString("tweeter") + " ";
+                result.add(rs.getString("tweeter"));
             }
         } catch (Exception e){
             e.printStackTrace();
@@ -45,8 +45,8 @@ public class TweeterAbstract implements TweeterObject{
     }
 
     @Override
-    public String getDate() {
-        String result = "";
+    public List getDate() {
+        List<String> result = new ArrayList<>();
         try {
             UserAuth auth = UserAuth.getInstance();
             ResultSet rs = auth.executeQuery("SELECT earliest, latest FROM " + "tweeterabstract");
@@ -65,7 +65,7 @@ public class TweeterAbstract implements TweeterObject{
             {
                 // System.out.println(rs.getString("earliest"));
                 // System.out.println(rs.getString("latest"));
-                result = result + rs.getString("earliest") + " " + rs.getString("latest") + " ";
+                result.add(rs.getString("earliest")+ " " + rs.getString("latest"));
             }
         } catch (Exception e){
             e.printStackTrace();
@@ -74,13 +74,13 @@ public class TweeterAbstract implements TweeterObject{
     }
 
     @Override
-    public String getIntro() {
+    public List getIntro() {
         System.out.println("Forbidden Method Call!");
         return null;
     }
 
     @Override
-    public String getDetailName() {
+    public List getDetailName() {
         System.out.println("Forbidden Method Call!");
         return null;
     }

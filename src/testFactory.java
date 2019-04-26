@@ -30,10 +30,11 @@ public class testFactory {
         TweeterFactory detailFactory = new TweeterDetailFactory();
         TweeterObject detailObject = detailFactory.create();
         detailObject.declare();
-        List list = detailObject.getEveryTweet(listObject.getDetailName());
+        List list = detailObject.getEveryTweet(listObject.getDetailName().get(0).toString());
         System.out.println(list.get(0));
         System.out.println(list.get(200));
         System.out.println(list.get(500));
         System.out.println(list.get(abstractObject.getTotalCount().get(0)-1));
+        auth.Disconnect();
     }
 }

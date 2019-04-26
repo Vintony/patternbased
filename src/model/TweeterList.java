@@ -1,6 +1,7 @@
 package model;
 import java.sql.ResultSet;
 import java.util.ArrayList;
+import java.util.List;
 
 
 public class TweeterList implements TweeterObject {
@@ -19,15 +20,15 @@ public class TweeterList implements TweeterObject {
         }
     }
 
-    public String getTweeter(){
-        String result = "";
+    public List getTweeter(){
+        List<String> result = new ArrayList<>();
         try {
             UserAuth auth = UserAuth.getInstance();
             ResultSet rs = auth.executeQuery("SELECT tweeter FROM " + "tweeterlist");
             while (rs.next())
             {
                 // System.out.println(rs.getString("tweeter"));
-                result = result + rs.getString("tweeter") + " ";
+                result.add(rs.getString("tweeter"));
             }
         } catch (Exception e){
             e.printStackTrace();
@@ -35,15 +36,15 @@ public class TweeterList implements TweeterObject {
         return result;
     }
 
-    public String getIntro() {
-        String result = "";
+    public List getIntro() {
+        List<String> result = new ArrayList<>();
         try {
             UserAuth auth = UserAuth.getInstance();
             ResultSet rs = auth.executeQuery("SELECT intro FROM " + "tweeterlist");
             while (rs.next())
             {
                 // System.out.println(rs.getString("intro"));
-                result = result + rs.getString("intro") + " ";
+                result.add(rs.getString("intro"));
             }
         } catch (Exception e){
             e.printStackTrace();
@@ -52,15 +53,15 @@ public class TweeterList implements TweeterObject {
     }
 
     @Override
-    public String getDetailName() {
-        String result = "";
+    public List getDetailName() {
+        List<String> result = new ArrayList<>();
         try {
             UserAuth auth = UserAuth.getInstance();
             ResultSet rs = auth.executeQuery("SELECT detailname FROM " + "tweeterlist");
             while (rs.next())
             {
                 // System.out.println(rs.getString("detailname"));
-                result = result + rs.getString("detailname") + " ";
+                result.add(rs.getString("detailname"));
             }
         } catch (Exception e){
             e.printStackTrace();
@@ -75,7 +76,7 @@ public class TweeterList implements TweeterObject {
     }
 
     @Override
-    public String getDate() {
+    public List getDate() {
         System.out.println("Forbidden Method Call!");
         return null;
     }

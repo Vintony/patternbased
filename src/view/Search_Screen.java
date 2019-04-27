@@ -17,6 +17,7 @@ import javax.swing.JList;
 
 public class Search_Screen extends JFrame {
 
+
     private JPanel contentPane;
     private Main_Screen main_screen;
     static String content="";

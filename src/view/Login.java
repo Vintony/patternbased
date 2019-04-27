@@ -1,6 +1,11 @@
 package view;
 
+
+import java.awt.BorderLayout;
+import java.awt.EventQueue;
+
 import controller.LogIn;
+
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
@@ -62,8 +67,8 @@ public class Login extends JFrame {
                     JOptionPane.showMessageDialog(null, "Please enter username or password", "Warning", JOptionPane.ERROR_MESSAGE);
                     //check the username and password---need modify
                 else if(username.equals("admin")&&password.equals("admin")) {
-                    Main_Screen main_screen=new Main_Screen();
-                    main_screen.setVisible(true);
+                    Choose_Screen choose_screen=new Choose_Screen();
+                    choose_screen.setVisible(true);
                     Login.this.dispose();
                 }
                 else {
@@ -111,8 +116,8 @@ public class Login extends JFrame {
         }else{
             LogIn logIn = new LogIn(username, password);
             if (logIn.Connect()){
-                Main_Screen main_screen=new Main_Screen();
-                main_screen.setVisible(true);
+                Choose_Screen choose_screen=new Choose_Screen();
+                choose_screen.setVisible(true);
                 Login.this.dispose();
             }else{
                 Username.setText("");

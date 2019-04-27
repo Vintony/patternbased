@@ -20,7 +20,7 @@ public class TweeterList implements TweeterObject {
         }
     }
 
-    public List getTweeter(){
+    public List<String> getTweeter(){
         List<String> result = new ArrayList<>();
         try {
             UserAuth auth = UserAuth.getInstance();

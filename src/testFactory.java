@@ -1,4 +1,8 @@
 import model.*;
+import controller.*;
+
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 
@@ -35,6 +39,16 @@ public class testFactory {
         System.out.println(list.get(200));
         System.out.println(list.get(500));
         System.out.println(list.get(abstractObject.getTotalCount().get(0)-1));
+
+        DataPreprocess dataPreprocess = new DataPreprocess(listObject.getDetailName());
+        System.out.println(dataPreprocess.getTweet_count()[0]);
+        List newData = new ArrayList<>();
+        newData.add(list.get(0));
+        System.out.println(newData.size());
+        dataPreprocess.changeContent(newData);
+        System.out.println(dataPreprocess.getTweet_count()[0]);
         auth.Disconnect();
+
+
     }
 }

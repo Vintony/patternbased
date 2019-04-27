@@ -1,10 +1,10 @@
 package view;
 import controller.DataDisplay;
 import controller.DataPreprocess;
+import controller.FilterInterpreter;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.util.HashMap;
 import java.util.List;
 import java.awt.*;
 import javax.swing.*;
@@ -14,11 +14,11 @@ import java.awt.event.MouseEvent;
 
 public class Main_Screen extends JFrame {
     private JPanel contentPane;
-    private JTextField Search_content;
+    private JTextField Filter_content;
     private JList Stat_list;
-
-    private List raw_data;
-    private List display_data;
+    private DataPreprocess dataPreprocess;
+    private DataDisplay dataDisplay;
+    private List<String> detailName;
 
 
     /**
@@ -39,6 +39,7 @@ public class Main_Screen extends JFrame {
      * Create the frame.
      */
     public Main_Screen(List<String> detailName) {
+        this.detailName = detailName;
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setBounds(100, 100, 800, 640);
         contentPane = new JPanel();
@@ -46,45 +47,47 @@ public class Main_Screen extends JFrame {
         setContentPane(contentPane);
         contentPane.setLayout(null);
 
-        Search_content = new JTextField();
-        Search_content.setToolTipText("Search");
-        Search_content.setBounds(412, 21, 220, 37);
-        contentPane.add(Search_content);
-        Search_content.setColumns(10);
+        Filter_content = new JTextField();
+        Filter_content.setToolTipText("Search");
+        Filter_content.setBounds(412, 21, 220, 37);
+        contentPane.add(Filter_content);
+        Filter_content.setColumns(10);
 
-        JButton Search_button = new JButton("Search");
-        Search_button.setFont(new Font("Times New Roman", Font.PLAIN, 24));
-        Search_button.addActionListener(new ActionListener() {
+        JButton ApplyFilter = new JButton("Filter");
+        ApplyFilter.setFont(new Font("Times New Roman", Font.PLAIN, 24));
+        /*ApplyFilter.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent arg0) {
                 //need modify
             }
-        });
-        /*Search_button.addMouseListener(new MouseAdapter() {
+        });*/
+        ApplyFilter.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent arg0) {
-                String search_content=Search_content.getText();
-                if(search_content.equals(""))
-                    JOptionPane.showMessageDialog(null, "Please enter search content", "Warning", JOptionPane.ERROR_MESSAGE);
-                else {
-                    Search_Screen search_screen=new Search_Screen(search_content);
-                    search_screen.setVisible(true);
-                    Main_Screen.this.dispose();
+                String filter_contentText=Filter_content.getText();
+                if(filter_contentText.equals("")) {
+                    JOptionPane.showMessageDialog(null, "Show origin data", "Warning", JOptionPane.INFORMATION_MESSAGE);
+                    dataPreprocess = new DataPreprocess(detailName);
+                    dataDisplay = new DataDisplay(dataPreprocess);
+                    Stat_list.setListData(dataDisplay.FetchDisplayData());
+                } else {
+                    FilterInterpreter interpreter = new FilterInterpreter(filter_contentText, dataDisplay);
+                    Stat_list.setListData(interpreter.DisplayNewData());
                 }
             }
-        });*/
-        Search_button.setBounds(655, 20, 105, 40);
-        contentPane.add(Search_button);
+        });
+        ApplyFilter.setBounds(655, 20, 105, 40);
+        contentPane.add(ApplyFilter);
 
-        JButton Show_result = new JButton("Show result");
+        JButton Show_result = new JButton("Display ");
         Show_result.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent arg0) {
-                String search_content=Search_content.getText();
+                String search_content= Filter_content.getText();
                 if(search_content.equals(""))
                     JOptionPane.showMessageDialog(null, "Please enter search content", "Warning", JOptionPane.ERROR_MESSAGE);
                 else {
-                    Search_Screen search_screen=new Search_Screen(search_content);
-                    search_screen.setVisible(true);
+                    Analyze_Screen analyze_screen =new Analyze_Screen(search_content);
+                    analyze_screen.setVisible(true);
                     Main_Screen.this.dispose();
                 }
             }
@@ -103,9 +106,11 @@ public class Main_Screen extends JFrame {
         JScrollPane scrollPane = new JScrollPane();
         scrollPane.setBounds(21, 135, 737, 368);
         scrollPane.setViewportView(Stat_list);
-        DataPreprocess dataPreprocess = new DataPreprocess(detailName);
-        DataDisplay dataDisplay = new DataDisplay(dataPreprocess);
+
+        dataPreprocess = new DataPreprocess(this.detailName);
+        dataDisplay = new DataDisplay(dataPreprocess);
         Stat_list.setListData(dataDisplay.FetchDisplayData());
+
         contentPane.add(scrollPane);
 
         JRadioButton Sort_max = new JRadioButton("Max");

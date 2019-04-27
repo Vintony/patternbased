@@ -10,7 +10,7 @@ import javax.swing.JButton;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 
-public class Search_Screen extends JFrame {
+public class Analyze_Screen extends JFrame {
 
 
     private JPanel contentPane;
@@ -23,7 +23,7 @@ public class Search_Screen extends JFrame {
         EventQueue.invokeLater(new Runnable() {
             public void run() {
                 try {
-                    Search_Screen frame = new Search_Screen(content);
+                    Analyze_Screen frame = new Analyze_Screen(content);
                     frame.setVisible(true);
                 } catch (Exception e) {
                     e.printStackTrace();
@@ -35,7 +35,7 @@ public class Search_Screen extends JFrame {
     /**
      * Create the frame.
      */
-    public Search_Screen(String content) {
+    public Analyze_Screen(String content) {
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setBounds(100, 100, 800, 640);
         contentPane = new JPanel();
@@ -61,7 +61,7 @@ public class Search_Screen extends JFrame {
             public void mouseClicked(MouseEvent e) {
                 Choose_Screen choose_screen=new Choose_Screen();
                 choose_screen.setVisible(true);
-                Search_Screen.this.dispose();
+                Analyze_Screen.this.dispose();
             }
         });
         btnNewButton.setFont(new Font("Times New Roman", Font.PLAIN, 24));

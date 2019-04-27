@@ -74,6 +74,10 @@ public class DataPreprocess {
         }*/
     }
 
+    public List<String[]> getTweet_row() {
+        return tweet_row;
+    }
+
     public List<HashMap> getRaw_data() {
         return raw_data;
     }

@@ -19,6 +19,10 @@ public class DataDisplay {
         return this.dataPreprocess.getRaw_data();
     }
 
+    public List<String[]> getTweet_row() {
+        return this.dataPreprocess.getTweet_row();
+    }
+
     public int[] getTweet_count() {
         return this.dataPreprocess.getTweet_count();
     }
@@ -36,5 +40,4 @@ public class DataDisplay {
         }
         return result;
     }
-    
 }

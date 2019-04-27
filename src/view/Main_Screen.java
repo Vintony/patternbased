@@ -1,4 +1,5 @@
 package view;
+import controller.DataDisplay;
 import controller.DataPreprocess;
 
 import java.awt.event.ActionEvent;
@@ -17,6 +18,7 @@ public class Main_Screen extends JFrame {
     private JList Stat_list;
 
     private List raw_data;
+    private List display_data;
 
 
     /**
@@ -37,9 +39,6 @@ public class Main_Screen extends JFrame {
      * Create the frame.
      */
     public Main_Screen(List<String> detailName) {
-        DataPreprocess dataPreprocess = new DataPreprocess(detailName);
-        raw_data = dataPreprocess.getRaw_data();
-
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setBounds(100, 100, 800, 640);
         contentPane = new JPanel();
@@ -104,6 +103,9 @@ public class Main_Screen extends JFrame {
         JScrollPane scrollPane = new JScrollPane();
         scrollPane.setBounds(21, 135, 737, 368);
         scrollPane.setViewportView(Stat_list);
+        DataPreprocess dataPreprocess = new DataPreprocess(detailName);
+        DataDisplay dataDisplay = new DataDisplay(dataPreprocess);
+        Stat_list.setListData(dataDisplay.FetchDisplayData());
         contentPane.add(scrollPane);
 
         JRadioButton Sort_max = new JRadioButton("Max");

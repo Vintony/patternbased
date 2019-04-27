@@ -1,8 +1,9 @@
 package view;
+import controller.FetchDetail;
 
-import java.awt.BorderLayout;
-import java.awt.EventQueue;
-
+import java.util.ArrayList;
+import java.util.List;
+import java.awt.*;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
@@ -10,7 +11,6 @@ import javax.swing.JTextField;
 import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.SwingConstants;
-import java.awt.Font;
 import javax.swing.JList;
 import javax.swing.JOptionPane;
 import javax.swing.JRadioButton;
@@ -22,6 +22,8 @@ public class Main_Screen extends JFrame {
     private JPanel contentPane;
     private JTextField Search_content;
     private JList Stat_list;
+    private List raw_data;
+
 
     /**
      * Launch the application.
@@ -30,7 +32,7 @@ public class Main_Screen extends JFrame {
         EventQueue.invokeLater(new Runnable() {
             public void run() {
                 try {
-                    Main_Screen frame = new Main_Screen();
+                    Main_Screen frame = new Main_Screen(null);
                     frame.setVisible(true);
                 } catch (Exception e) {
                     e.printStackTrace();
@@ -42,7 +44,28 @@ public class Main_Screen extends JFrame {
     /**
      * Create the frame.
      */
-    public Main_Screen() {
+    public Main_Screen(List<String> detailName) {
+        /*
+        *
+        * Just for test
+        * use fetchDetail object to getRawTweet
+        * sequence: latest to earliest
+        * raw_data stores all tweets raw data
+        * tweets format: {tweet_id, created_at, id, text}
+        *
+        * */
+        raw_data = new ArrayList();
+        for (int i = 0; i < detailName.size(); i++){
+            FetchDetail fetchDetail = new FetchDetail(detailName.get(i));
+            raw_data.addAll(fetchDetail.getRawTweet());
+            for (int j = 0; j < 2; j++){
+                System.out.println(fetchDetail.getRawTweet().get(j));
+            }
+        }
+
+        //raw_data process to usable data
+        //separate the word and delete meaningless word
+
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setBounds(100, 100, 800, 640);
         contentPane = new JPanel();
@@ -100,13 +123,13 @@ public class Main_Screen extends JFrame {
         Sort_min.setHorizontalAlignment(SwingConstants.CENTER);
         Sort_min.setBounds(673, 86, 85, 31);
         contentPane.add(Sort_min);
-        
+
         JLabel lblStatFor = new JLabel("Stat for");
         lblStatFor.setHorizontalAlignment(SwingConstants.CENTER);
         lblStatFor.setFont(new Font("Times New Roman", Font.PLAIN, 24));
         lblStatFor.setBounds(21, 85, 78, 29);
         contentPane.add(lblStatFor);
-        
+
         JLabel Choose_name = new JLabel("the chose name from the former list");
         Choose_name.setBounds(108, 85, 352, 29);
         contentPane.add(Choose_name);

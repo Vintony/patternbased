@@ -66,4 +66,3 @@ public class Search_Screen extends JFrame {
     }
 
 }
-

@@ -16,6 +16,8 @@ import javax.swing.JOptionPane;
 import javax.swing.JRadioButton;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 public class Main_Screen extends JFrame {
 
@@ -80,7 +82,13 @@ public class Main_Screen extends JFrame {
         Search_content.setColumns(10);
 
         JButton Search_button = new JButton("Search");
-        Search_button.addMouseListener(new MouseAdapter() {
+        Search_button.setFont(new Font("Times New Roman", Font.PLAIN, 24));
+        Search_button.addActionListener(new ActionListener() {
+        	public void actionPerformed(ActionEvent arg0) {
+        		//need modify
+        	}
+        });
+        /*Search_button.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent arg0) {
                 String search_content=Search_content.getText();
@@ -92,9 +100,27 @@ public class Main_Screen extends JFrame {
                     Main_Screen.this.dispose();
                 }
             }
-        });
-        Search_button.setBounds(653, 24, 105, 31);
+        });*/
+        Search_button.setBounds(655, 20, 105, 40);
         contentPane.add(Search_button);
+        
+        JButton Show_result = new JButton("Show result");
+        Show_result.addMouseListener(new MouseAdapter() {
+        	@Override
+        	public void mouseClicked(MouseEvent arg0) {
+        		String search_content=Search_content.getText();
+                if(search_content.equals(""))
+                    JOptionPane.showMessageDialog(null, "Please enter search content", "Warning", JOptionPane.ERROR_MESSAGE);
+                else {
+                    Search_Screen search_screen=new Search_Screen(search_content);
+                    search_screen.setVisible(true);
+                    Main_Screen.this.dispose();
+                }
+        	}
+        });
+        Show_result.setFont(new Font("Times New Roman", Font.PLAIN, 24));
+        Show_result.setBounds(607, 514, 153, 47);
+        contentPane.add(Show_result);
 
         JLabel lblWordStatisticalAnalysis = new JLabel("Word statistical analysis");
         lblWordStatisticalAnalysis.setFont(new Font("Times New Roman", Font.BOLD, 30));
@@ -103,25 +129,19 @@ public class Main_Screen extends JFrame {
         contentPane.add(lblWordStatisticalAnalysis);
 
         Stat_list = new JList();
-        Stat_list.setBounds(21, 135, 737, 413);
+        Stat_list.setBounds(21, 135, 737, 368);
         contentPane.add(Stat_list);
 
         JRadioButton Sort_max = new JRadioButton("Max");
         Sort_max.setFont(new Font("Times New Roman", Font.PLAIN, 20));
         Sort_max.setHorizontalAlignment(SwingConstants.CENTER);
-        Sort_max.setBounds(582, 86, 78, 31);
+        Sort_max.setBounds(457, 87, 78, 31);
         contentPane.add(Sort_max);
-
-        JLabel lblNewLabel = new JLabel("Sort by");
-        lblNewLabel.setFont(new Font("Times New Roman", Font.PLAIN, 24));
-        lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
-        lblNewLabel.setBounds(468, 85, 108, 29);
-        contentPane.add(lblNewLabel);
 
         JRadioButton Sort_min = new JRadioButton("Min");
         Sort_min.setFont(new Font("Times New Roman", Font.PLAIN, 20));
         Sort_min.setHorizontalAlignment(SwingConstants.CENTER);
-        Sort_min.setBounds(673, 86, 85, 31);
+        Sort_min.setBounds(548, 87, 85, 31);
         contentPane.add(Sort_min);
 
         JLabel lblStatFor = new JLabel("Stat for");
@@ -131,7 +151,17 @@ public class Main_Screen extends JFrame {
         contentPane.add(lblStatFor);
 
         JLabel Choose_name = new JLabel("the chose name from the former list");
-        Choose_name.setBounds(108, 85, 352, 29);
+        Choose_name.setBounds(108, 85, 333, 29);
         contentPane.add(Choose_name);
+        
+        JButton Sort_button = new JButton("Sort");
+        Sort_button.setFont(new Font("Times New Roman", Font.PLAIN, 24));
+        Sort_button.addActionListener(new ActionListener() {
+        	public void actionPerformed(ActionEvent e) {
+        	}
+        });
+        Sort_button.setBounds(655, 82, 105, 40);
+        contentPane.add(Sort_button);
+        
     }
 }

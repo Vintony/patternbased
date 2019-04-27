@@ -2,3 +2,6 @@
 .idea\*.xml
 *.xml
 *.kotlin_module
+out/production/patternbased/view/Login.class
+*.class
+*.class

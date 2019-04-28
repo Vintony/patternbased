@@ -3,8 +3,8 @@ package controller;
 import java.util.HashMap;
 import java.util.List;
 
-public class SingleWordState implements FilterState {
-    private static final BasicFilterAlgorithm singleWordFilter = new SingleWordFilter();
+public class RegexState implements FilterState{
+    private static final AdvancedFilterAlgorithm regexFilter = new RegexFilter();
     private List<HashMap> raw_data;
     private List<String[]> tweet_row;
     private String filterContent;
@@ -14,7 +14,7 @@ public class SingleWordState implements FilterState {
         this.raw_data = dataDisplay.getRaw_data();
         this.tweet_row = dataDisplay.getTweet_row();
         this.filterContent = FilterContent;
-        FilteringData filteringData = new FilteringData(singleWordFilter, this.raw_data, this.tweet_row, this.filterContent);
+        FilteringData filteringData = new FilteringData(regexFilter, this.raw_data, this.tweet_row, this.filterContent);
         List<HashMap> new_raw_data = filteringData.filterData();
         dataDisplay.changeContent(new_raw_data);
         return dataDisplay.FetchDisplayData();

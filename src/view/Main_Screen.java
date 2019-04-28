@@ -2,6 +2,7 @@ package view;
 import controller.DataDisplay;
 import controller.DataPreprocess;
 import controller.FilterInterpreter;
+import controller.RegexAccelerator;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -40,6 +41,7 @@ public class Main_Screen extends JFrame {
      */
     public Main_Screen(List<String> detailName) {
         this.detailName = detailName;
+
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setBounds(100, 100, 800, 640);
         contentPane = new JPanel();
@@ -71,6 +73,8 @@ public class Main_Screen extends JFrame {
                     Stat_list.setListData(dataDisplay.FetchDisplayData());
                 } else {
                     FilterInterpreter interpreter = new FilterInterpreter(filter_contentText, dataDisplay);
+                    RegexAccelerator accelerator = new RegexAccelerator();
+                    interpreter.addObserver(accelerator);
                     Stat_list.setListData(interpreter.DisplayNewData());
                 }
             }
@@ -78,18 +82,12 @@ public class Main_Screen extends JFrame {
         ApplyFilter.setBounds(655, 20, 105, 40);
         contentPane.add(ApplyFilter);
 
-        JButton Show_result = new JButton("Display ");
+        JButton Show_result = new JButton("Display Analysis Result");
         Show_result.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent arg0) {
-                String search_content= Filter_content.getText();
-                if(search_content.equals(""))
-                    JOptionPane.showMessageDialog(null, "Please enter search content", "Warning", JOptionPane.ERROR_MESSAGE);
-                else {
-                    Analyze_Screen analyze_screen =new Analyze_Screen(search_content);
-                    analyze_screen.setVisible(true);
-                    Main_Screen.this.dispose();
-                }
+                Analyze_Screen analyze_screen =new Analyze_Screen(dataDisplay);
+                analyze_screen.setVisible(true);
             }
         });
         Show_result.setFont(new Font("Times New Roman", Font.PLAIN, 24));

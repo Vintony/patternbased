@@ -45,6 +45,7 @@ public class testFactory {
         List newData = new ArrayList<>();
         newData.add(list.get(0));
         System.out.println(newData.size());
+        System.out.println(dataPreprocess.getWord_frequency_order());
         dataPreprocess.changeContent(newData);
         System.out.println(dataPreprocess.getTweet_count()[0]);
         auth.Disconnect();

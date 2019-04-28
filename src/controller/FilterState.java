@@ -1,5 +1,5 @@
 package controller;
 
 public interface FilterState {
-    public String[] ApplyFileter(String FilterContent, DataDisplay dataDisplay);
+    public String[] ApplyFilter(String FilterContent, DataDisplay dataDisplay);
 }

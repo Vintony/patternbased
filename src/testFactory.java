@@ -10,7 +10,7 @@ public class testFactory {
     private static String driver = "com.mysql.cj.jdbc.Driver";
     private static String url = "jdbc:mysql://localhost:3306/emojiproject";
     private static String userName = "Vincent";
-    private static String userPass = "Ljc19950925!";
+    private static String userPass = "password";
 
     public static void main(String[] args) {
         TweeterFactory listFactory = new TweeterListFactory();
